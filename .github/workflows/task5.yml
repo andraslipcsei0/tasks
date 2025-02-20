@@ -15,5 +15,4 @@ jobs:
   jobCallToWorkflow:
     runs-on: self-hosted
     steps:
-      - run: echo "Hello world"
-        shell: cmd
+      - uses: ./.github/workflows/task1.yml
