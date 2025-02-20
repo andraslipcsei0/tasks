@@ -1,0 +1,8 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+jobs:
+  jobManual:
+    runs-on: windows-latest
+    steps:
+      - run: echo Manually triggered job.
