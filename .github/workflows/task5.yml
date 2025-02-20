@@ -1,0 +1,19 @@
+name: Call to another workflow
+on:
+  workflow_dispatch:
+jobs:
+  jobWinShell:
+    runs-on: windows-latest
+    steps:
+      - run: echo "Hello world"
+        shell: cmd
+  jobPowerShell:
+    runs-on: windows-latest
+    steps:
+      - run: echo "Hello world"
+        shell: pwsh
+  jobCallToWorkflow:
+    runs-on: self-hosted
+    steps:
+      - run: echo "Hello world"
+        shell: cmd
