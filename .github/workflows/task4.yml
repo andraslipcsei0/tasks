@@ -1,0 +1,16 @@
+name: Different runners
+on:
+  workflow_dispatch:
+jobs:
+  windowsJob:
+    runs-on: windows-latest
+    steps:
+      - run: echo Windows job is running.
+  ubuntuJob:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Ubuntu job is running.
+  selfRunnerJob:
+    runs-on: self-hosted
+    steps:
+      - run: echo Self hosted job is running.
