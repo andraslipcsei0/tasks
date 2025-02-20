@@ -1,0 +1,10 @@
+name: CRON workflow
+on:
+  schedule:
+    - cron: "59 * * * *"
+jobs:
+  job:
+    runs-on: windows-latest
+    steps:
+      - name: cronStep
+        run: echo "Kakukk."
