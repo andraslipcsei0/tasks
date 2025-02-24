@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+env:
+  WORKFLOW_VAR: "workflow var"
+jobs:
+  job:
+    runs-on: windows-latest
+    env:
+      JOB_VAR: "job_var"
+    steps:
+      - env:
+          STEP_VAR: "step_var"
+        run: echo ${{ env.STEP_VAR }}
+      - run: echo $JOB_VAR
+      - run: echo ${{ WORKFLOW_VAR }}
