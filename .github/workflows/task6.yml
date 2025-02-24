@@ -1,3 +1,5 @@
+name:
+  Workflow, job, and step level variables
 on:
   workflow_dispatch:
 env:
