@@ -1,3 +1,4 @@
+name: "Runner environment variables"
 on:
   workflow_dispatch:
 jobs:
