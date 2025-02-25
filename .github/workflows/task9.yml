@@ -5,6 +5,6 @@ jobs:
   job:
     runs-on: windows-latest
     steps:
-      - run: echo ${{ toJson(runner) }}
-      - run: echo ${{ toJson(job) }}
-      - run: echo ${{ toJson(steps) }}
+      - run: echo "${{ toJson(runner) }}"
+      - run: echo "${{ toJson(job) }}"
+      - run: echo "${{ toJson(steps) }}"
