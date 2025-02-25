@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+jobs:
+  job:
+    runs-on: windows-latest
+    steps:
+      - run: echo $RUNNER_NAME
+      - run: echo $RUNNER_OS
+      - run: echo $RUNNER_ARCH
