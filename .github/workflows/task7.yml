@@ -5,7 +5,7 @@ jobs:
   job:
     runs-on: windows-latest
     steps:
-      - run: echo ${{ github.event.name }}
+      - run: echo ${{ github.event_name }}
         shell: cmd
       - run: echo ${{ github.repository }}
         shell: cmd
