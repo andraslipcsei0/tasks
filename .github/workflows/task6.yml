@@ -12,6 +12,9 @@ jobs:
     steps:
       - env:
           STEP_VAR: "step_var"
+        shell: "cmd"
         run: echo ${{ env.STEP_VAR }}
       - run: echo $JOB_VAR
-      - run: echo ${{ WORKFLOW_VAR }}
+        shell: "cmd"
+      - run: echo ${{ env.WORKFLOW_VAR }}
+        shell: "cmd"
