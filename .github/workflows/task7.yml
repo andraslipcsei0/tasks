@@ -5,9 +5,9 @@ jobs:
   job:
     runs-on: windows-latest
     steps:
-      - run: echo ${{ env.github.event.name }}
+      - run: echo ${{ github.event.name }}
         shell: cmd
-      - run: echo ${{ env.github.repository }}
+      - run: echo ${{ github.repository }}
         shell: cmd
-      - run: echo ${{ env.github.sha }}
+      - run: echo ${{ github.sha }}
         shell: cmd
