@@ -5,6 +5,6 @@ jobs:
   job:
     runs-on: windows-latest
     steps:
-      - run: echo $RUNNER_NAME
-      - run: echo $RUNNER_OS
-      - run: echo $RUNNER_ARCH
+      - run: echo ${{ runner.name }}
+      - run: echo ${{ runner.os }}
+      - run: echo ${{ runner.arch }}
