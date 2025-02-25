@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+jobs:
+  job:
+    runs-on: windows-latest
+    steps:
+      - runs: echo $GITHUB_EVENT_NAME
+      - runs: echo $GITHUB_REPOSITORY
+      - runs: echo $GITHUB_SHA
