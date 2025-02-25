@@ -1,0 +1,11 @@
+name: "Parameterized workflow with secrets"
+on:
+  workflow_dispatch
+jobs:
+  job:
+    runs-on: windows-latest
+    steps:
+      - run: echo ${{ secrets.ENV_SECRET1 }}
+      - run: echo ${{ secrets.ENV_SECRET2 }}
+      - run: echo ${{ secrets.REP_SECRET1 }}
+      - run: echo ${{ secrets.REP_SECRET2 }}
