@@ -5,9 +5,9 @@ jobs:
   job:
     runs-on: windows-latest
     steps:
-      - run: echo ${{ $GITHUB_EVENT_NAME }}
+      - run: echo ${{ vars.GITHUB_EVENT_NAME }}
         shell: cmd
-      - run: echo ${{ $GITHUB_REPOSITORY }}
+      - run: echo ${{ vars.$GITHUB_REPOSITORY }}
         shell: cmd
-      - run: echo ${{ $GITHUB_SHA }}
+      - run: echo ${{ vars.$GITHUB_SHA }}
         shell: cmd
