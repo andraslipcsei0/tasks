@@ -6,6 +6,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo ${{ secrets.ENV_SECRET1 }}
+        shell: cmd
       - run: echo ${{ secrets.ENV_SECRET2 }}
+        shell: cmd
       - run: echo ${{ secrets.REP_SECRET1 }}
+        shell: cmd
       - run: echo ${{ secrets.REP_SECRET2 }}
+        shell: cmd
