@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo ${{ vars.GITHUB_EVENT_NAME }}
         shell: cmd
-      - run: echo ${{ vars.$GITHUB_REPOSITORY }}
+      - run: echo ${{ vars.GITHUB_REPOSITORY }}
         shell: cmd
-      - run: echo ${{ vars.$GITHUB_SHA }}
+      - run: echo ${{ vars.GITHUB_SHA }}
         shell: cmd
