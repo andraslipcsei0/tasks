@@ -4,7 +4,7 @@ on:
 jobs:
   job:
     env:
-      ENVSECRET1: ${{ secrets.ENV_SECRET1 }}
+      ENVSECRET1: "maci"
       ENVSECRET2: ${{ secrets.ENV_SECRET2 }}
     runs-on: windows-latest
     steps:
