@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      input1:
+        required: true
+        type: string
+jobs:
+  job1:
+    runs-on: windows-latest
+    steps:
+      - run: echo ${{ inputs.input1 }}
