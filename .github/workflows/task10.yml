@@ -3,15 +3,15 @@ on:
   workflow_dispatch
 jobs:
   job:
+    outputs:
+      output1: ${{ secrets.ENV_SECRET1 }}
+      output2: ${{ secrets.ENV_SECRET2 }}
     environment: Environment1
-    env:
-      ENVSECRET1: ${{ secrets.ENV_SECRET1 }}
-      ENVSECRET2: ${{ secrets.ENV_SECRET2 }}
     runs-on: windows-latest
     steps:
-      - run: echo ${{ env.ENVSECRET1 }}
+      - run: echo ${{ secrets.ENV_SECRET1 }}
         shell: cmd
-      - run: echo ${{ env.ENVSECRET2 }}
+      - run: echo ${{ secrets.ENV_SECRET2}}
         shell: cmd
       - run: echo ${{ secrets.REP_SECRET1 }}
         shell: cmd
