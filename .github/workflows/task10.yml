@@ -3,11 +3,14 @@ on:
   workflow_dispatch
 jobs:
   job:
+    env:
+      ENVSECRET1: ${{ secrets.ENV_SECRET1 }}
+      ENVSECRET2: ${{ secrets.ENV_SECRET2 }}
     runs-on: windows-latest
     steps:
-      - run: echo ${{ secrets.ENV_SECRET1 }}
+      - run: echo ${{ env.ENVSECRET1 }}
         shell: cmd
-      - run: echo ${{ secrets.ENV_SECRET2 }}
+      - run: echo ${{ env.ENVSECRET2 }}
         shell: cmd
       - run: echo ${{ secrets.REP_SECRET1 }}
         shell: cmd
