@@ -2,7 +2,9 @@ name: "Parameterized workflow with secrets"
 on:
   workflow_dispatch
 jobs:
-  job:
+  job1:
+    uses: "./.github/workflows/task10b.yml"
+  job2:
     outputs:
       output1: ${{ secrets.ENV_SECRET1 }}
       output2: ${{ secrets.ENV_SECRET2 }}
