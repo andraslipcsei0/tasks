@@ -1,3 +1,4 @@
+name: Parameterized workflow with secrets 2
 on:
   workflow_dispatch:
   workflow_call:
