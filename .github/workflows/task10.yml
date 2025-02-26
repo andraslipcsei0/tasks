@@ -3,8 +3,9 @@ on:
   workflow_dispatch
 jobs:
   job:
+    environment: Environment1
     env:
-      ENVSECRET1: "maci"
+      ENVSECRET1: ${{ secrets.ENV_SECRET1 }}
       ENVSECRET2: ${{ secrets.ENV_SECRET2 }}
     runs-on: windows-latest
     steps:
